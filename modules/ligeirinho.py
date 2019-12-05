@@ -29,7 +29,7 @@ class Ligeirinho(NQMDebug):
             self.results_dict = self.s.results.dict()
         except:
             self.printa('Deu erro na bagaça, reiniciando teste...')
-            self.__init__()
+            self.make_speedtest()
 
     def check_internet_connection(self):
         self.printa('Realizando checkup da conexão...')
