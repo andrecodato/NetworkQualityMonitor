@@ -2,7 +2,7 @@ import time
 import speedtest
 import requests
 
-from debug.NQMDebug import NQMDebug
+from modules.debug.NQMDebug import NQMDebug
 
 
 class Ligeirinho(NQMDebug):
@@ -41,6 +41,7 @@ class Ligeirinho(NQMDebug):
         except requests.ConnectionError:
             self.printa(
                 '[ERRO]Oh meu parceiro, não obtive acesso a rede mundial de comunicação!')
+            return False
 
     def get_results(self):
         download = self.results_dict["download"]
